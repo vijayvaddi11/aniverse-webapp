@@ -1,59 +1,85 @@
-import { useEffect, useState } from "react";
-import Search from "./components/Search";
-import Loader from "./components/Loader";
-import AnimeCard from "./components/AnimeCard";
+import { useEffect, useState } from 'react';
+import Search from './components/Search';
+import Loader from './components/Loader';
+import AnimeCard from './components/AnimeCard';
+import { getTrendingAnimes, updateSearchCount } from './appwrite';
+
+
 
 const API_BASE_URL = 'https://api.jikan.moe/v4/';
-
-const API_OPTIONS = {
-  method: 'GET',
-  headers: {
-    accept:'application/json'
-  }
-}
 
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [animeList, setAnimeList] = useState([])
-  const[isLoading,setIsLoading]=useState(false)
+  const [animeList, setAnimeList] = useState([]);
+  const[trendingAnimes,setTrendingAnimies]=useState([])
+  const [isLoading, setIsLoading] = useState(false);
 
-  const fetchAnimes = async () => {
-    setIsLoading(true)
-    setErrorMessage('')
+
+
+  const fetchAnimes = async (query = '') => {
+    setIsLoading(true);
+    setErrorMessage('');
 
 
     try {
-      const endPoint = `${API_BASE_URL}top/anime?filter=bypopularity&limit=25`;
+      const endPoint = query
+        ? `${API_BASE_URL}anime?q=${encodeURIComponent(query)}&limit=20`
+        : `${API_BASE_URL}top/anime?filter=bypopularity&limit=25`;
 
-      const response = await fetch(endPoint, API_OPTIONS)
-      
+
+      const response = await fetch(endPoint);
+
+
       if (!response.ok) {
-        throw new Error(`Failed to fetch animes`)
+        throw new Error(`Failed to fetch animes`);
       }
+
 
       const data = await response.json();
-      
-      if (data.response === 'false') {
-        setErrorMessage(data.Error || `Failed to fetch animes`)
+
+
+      if (!data.data || data.data.length === 0) {
+        setErrorMessage('No animes found for your search');
         setAnimeList([]);
-        return
+        return;
       }
 
-      setAnimeList(data.data || [])
+
+      setAnimeList(data.data || []);
       
-    } catch(error) {
-      console.log(`Error Fetching Animes: ${error}`);
-      setErrorMessage('Error fetching animes, Please try again later.')
+if (query && data.data.length > 0) {
+  await updateSearchCount(query, data.data[0]);
+}
+
+    } catch (error) {
+      console.error(`Error Fetching Animes:`, error);
+      setErrorMessage('Error fetching animes, Please try again later.');
     } finally {
       setIsLoading(false);
     }
-  }
-  
+  };
+
+
+  const loadTrendingAnimes = async () => {
+    try {
+      const animes = await getTrendingAnimes();
+      setTrendingAnimies(animes);
+    } catch (e) {
+      console.log(`Error fetching trending movies:${e}`);
+    }
+  };
+
+
+
   useEffect(() => {
-    fetchAnimes()
-  },[])
+    fetchAnimes();
+    loadTrendingAnimes();
+  }, []);
+
+
+
 
   return (
     <main>
@@ -65,11 +91,29 @@ function App() {
             Level Up Your Watchlist with the Best{' '}
             <span className='text-gradient'>Animes</span>
           </h1>
-          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          <Search
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            onSearch={fetchAnimes}
+          />
         </header>
 
+        {trendingAnimes.length > 0 && (
+          <section className='trending'>
+            <h2>Trending Animes</h2>
+            <ul>
+              {trendingAnimes.map((anime, index) => (
+                <li key={anime.$id}>
+                  <p>{index + 1}</p>
+                  <img src={anime.poster_url} alt={anime.title} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         <section className='all-movies'>
-          <h2 className='mt-[50px]'>All Animes</h2>
+          <h2>All Animes</h2>
 
           {isLoading ? (
             <Loader />
@@ -83,8 +127,8 @@ function App() {
                   anime={{
                     image: anime.images.jpg.large_image_url,
                     titleEnglish: anime.title_english,
-                    titleJapanese:anime.title_japanese,
-                    status: anime.status,
+                    title: anime.title,
+                    year: anime.aired?.prop?.from?.year,
                     episodes: anime.episodes,
                     rating: anime.score,
                     rank: anime.rank,
@@ -101,4 +145,5 @@ function App() {
   );
 }
 
-export default App
+
+export default App;
