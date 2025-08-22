@@ -52,7 +52,7 @@ export const updateSearchCount = async (searchTerm, anime) => {
 export const getTrendingAnimes = async () => {
   try {
     const result = await database.listDocuments(DATABASE_ID_ENV, COLLECTION_ID_ENV, [
-      Query.limit(5),
+      Query.limit(7),
       Query.orderDesc('count')
     ])
     return result.documents; 
