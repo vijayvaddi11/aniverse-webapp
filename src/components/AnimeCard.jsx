@@ -38,20 +38,20 @@ export default function AnimeCard({ anime }) {
           object-cover rounded-lg'
       />
       <div className='mt-4'>
-        <h3>{anime.titleEnglish || anime.titleJapanese}</h3>
+        <h3>{anime.titleEnglish || anime.title||'N/A'}</h3>
       </div>
 
       {/* Content */}
       <div className='mt-2 text-white'>
-        <h2 className='text-lg font-semibold'>{anime.title}</h2>
         <p className='text-gray-400 text-sm'>
-          {anime.season} • {anime.episodes} episodes
+          {anime.year||'N/A'} • {anime.episodes||'N/A'} episodes
         </p>
 
         {/* Rating + Rank */}
         <div className='flex items-center gap-4 mt-2 text-sm text-gray-300'>
-          <span>⭐ {anime.rating.toFixed(1) }</span>
-          <span>#{anime.rank || N / A} Ranking</span>
+          <span>⭐ {anime.rating ? anime.rating.toFixed(1) : 'N/A'}</span>
+
+          <span>#{anime.rank || 'N/A'} Ranking</span>
         </div>
 
         {/* Tags */}
@@ -61,7 +61,7 @@ export default function AnimeCard({ anime }) {
               key={index}
               className='text-xs px-2 py-1 bg-gray-700 rounded-full'
             >
-              {genre || N / A}
+              {genre || 'N/A'}
             </span>
           ))}
         </div>
