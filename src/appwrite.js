@@ -18,7 +18,7 @@ export const updateSearchCount = async (searchTerm, anime) => {
       DATABASE_ID_ENV,
       COLLECTION_ID_ENV,
       [Query.equal('searchTerm', searchTerm)]
-    );
+    ); 
 
     if (result.documents.length > 0) {
       // 2. If exists → increment count
