@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+ import { useEffect, useState } from 'react';
 import Search from './Search';
 import Loader from './Loader';
 import AnimeCard from './AnimeCard';
