@@ -40,7 +40,7 @@ export const updateSearchCount = async (searchTerm, anime) => {
           searchTerm,
           count: 1,
           anime_id: anime.mal_id, 
-          poster_url: anime.images?.jpg?.large_image_url, 
+          poster_url: anime.images?.jpg?.large_image_url,
         }
       );
     }
