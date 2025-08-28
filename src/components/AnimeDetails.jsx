@@ -243,7 +243,7 @@ export default function AnimeDetails({ani}) {
             </div>
           </div>
         )}
-      </div>
+      </div> 
     </div>
   );
 }
