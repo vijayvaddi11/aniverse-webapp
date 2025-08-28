@@ -14,7 +14,7 @@ export default function AnimeCard({ anime ,full}) {
     setRotate({ x, y });
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = () => { 
     setRotate({ x: 0, y: 0 });
   };
 
