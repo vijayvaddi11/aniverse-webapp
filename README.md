@@ -19,45 +19,35 @@ A **modern anime discovery and recommendation web app** built with **React (Vite
 
 ## 🛠️ Tech Stack
 
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB, Mongoose
-- **Frontend:** HTML, CSS, Bootstrap, EJS
-- **Authentication:** Passport.js (local strategy)
-- **Validation:** Joi
-- **Templating Engine:** EJS
-- **Middleware:** Express-session, connect-flash, method-override
+- **Frontend:** React (Vite), Tailwind CSS
+- **Animations:** Framer Motion 
+- **Backend:** Appwrite
+- **API:** Jikan API
+- **Deployment:** Netlify 
+- 
 
-## 📸 Screenshots
+## 📸 Screenshots of Aniverse
 
-### 🔹 Home Page
-![Home Page](https://res.cloudinary.com/vijayvaddi/image/upload/v1724856901/homepage.png)
-
-### 🔹 Trending Section
-![Trending](https://res.cloudinary.com/vijayvaddi/image/upload/v1234567890/trending.png)
+### 🔹 Home Page and Trending Section
+![Home Page](https://res.cloudinary.com/vijayvaddi/image/upload/v1756444517/Screenshot_from_2025-08-29_10-42-10_avktjb.png)
 
 ### 🔹 Anime Details
-![Details](https://res.cloudinary.com/vijayvaddi/image/upload/v1234567890/details.png)
+![Trending](https://res.cloudinary.com/vijayvaddi/image/upload/v1756444541/Screenshot_from_2025-08-29_10-42-59_eqfmjg.png)
 
-## Input validation and error handling.
-![Image](https://res.cloudinary.com/vijayvaddi/image/upload/v1749043067/shbaavlq0lkuxum9mfwk.png)
-
-
----
-## Campgrounds: Explore, leave a Review, and Share Campgrounds
-![Image](https://res.cloudinary.com/vijayvaddi/image/upload/v1749043057/izguqj5q61h4wr4h6rmu.png)
-
+### 🔹 Anime Recommendations
+![Details](https://res.cloudinary.com/vijayvaddi/image/upload/v1756444491/Screenshot_from_2025-08-29_10-43-37_ey3ejx.png)
 
 
 ---
 
-## 🧑‍💻 How to Run Locally
+## 🧑‍💻 Getting Started
 
 
 ```bash
 1. **Clone the repository:**
 
-git clone https://github.com/vijayvaddi11/Campgrounds.git
-cd Campgrounds
+git clone https://github.com/vijayvaddi11/aniverse-webapp.git
+cd aniverse-webapp
 
 
 
@@ -70,17 +60,16 @@ npm install
 
 Create a .env file in the root directory with the following content:
 
-DATABASE_URL=mongodb://localhost:27017/campgrounds
-SECRET=your_secret_key
-PORT=3000
+VITE_APPWRITE_PROJECT_ID=your_project_id
+VITE_APPWRITE_PROJECT_NAME=anime_app
+VITE_APPWRITE_ENDPOINT=https://fra.cloud.appwrite.io/v1
+VITE_APPWRITE_DATABASE_ID=your_database_id
+VITE_APPWRITE_COLLECTIONS_ID=your_collection_id
 
 
-4. **Seed the database:**
+4. **Run Locally:**
 
-node seeds/index.js
+npm run dev
 
 
-5. **Start the server:**
-
-node app.js
 
