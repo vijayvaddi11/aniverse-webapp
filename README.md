@@ -1,13 +1,82 @@
-# React + Vite
+# Aniverse webapp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **modern anime discovery and recommendation web app** built with **React (Vite), Tailwind CSS, and Appwrite**, powered by the **Jikan API**.Browse trending anime, explore detailed information, and get personalized recommendations — all in a clean and responsive UI.  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# aniverse-webapp
+- 🔎 **Search Anime** – Find anime titles using Jikan API.  
+- 📺 **Trending Section** – Displays currently popular anime.  
+- 🎬 **Anime Details Page** – View synopsis, ratings, rank, and genres.  
+- 🤝 **Recommendations Section** – Suggests similar anime.  
+- 🛠️ **Appwrite Integration** – Manages database & backend features.  
+- 📱 **Responsive Design** – Works seamlessly on mobile, tablet, and desktop.  
+- ⚡ **Fast UI** – Powered by **Vite + React + Tailwind** with smooth animations.  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB, Mongoose
+- **Frontend:** HTML, CSS, Bootstrap, EJS
+- **Authentication:** Passport.js (local strategy)
+- **Validation:** Joi
+- **Templating Engine:** EJS
+- **Middleware:** Express-session, connect-flash, method-override
+
+---
+## Home Page of Campgrounds after register
+![Campgrounds Screenshot](https://res.cloudinary.com/vijayvaddi/image/upload/v1749043076/dltwdtesck9f5bpykrbp.png)
+
+
+
+---
+## Input validation and error handling.
+![Image](https://res.cloudinary.com/vijayvaddi/image/upload/v1749043067/shbaavlq0lkuxum9mfwk.png)
+
+
+---
+## Campgrounds: Explore, leave a Review, and Share Campgrounds
+![Image](https://res.cloudinary.com/vijayvaddi/image/upload/v1749043057/izguqj5q61h4wr4h6rmu.png)
+
+
+
+---
+
+## 🧑‍💻 How to Run Locally
+
+
+```bash
+1. **Clone the repository:**
+
+git clone https://github.com/vijayvaddi11/Campgrounds.git
+cd Campgrounds
+
+
+
+
+2. **Install dependencies:**
+
+npm install
+
+3. **Set up environment variables:**
+
+Create a .env file in the root directory with the following content:
+
+DATABASE_URL=mongodb://localhost:27017/campgrounds
+SECRET=your_secret_key
+PORT=3000
+
+
+4. **Seed the database:**
+
+node seeds/index.js
+
+
+5. **Start the server:**
+
+node app.js
+
