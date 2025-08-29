@@ -24,8 +24,7 @@ A **modern anime discovery and recommendation web app** built with **React (Vite
 - **Backend:** Appwrite
 - **API:** Jikan API
 - **Deployment:** Netlify 
-- 
-
+  
 ## 📸 Screenshots of Aniverse
 
 ### 🔹 Home Page and Trending Section
