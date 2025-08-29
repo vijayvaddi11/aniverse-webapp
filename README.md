@@ -27,13 +27,17 @@ A **modern anime discovery and recommendation web app** built with **React (Vite
 - **Templating Engine:** EJS
 - **Middleware:** Express-session, connect-flash, method-override
 
----
-## Home Page of Campgrounds after register
-![Aniverse Screenshot](https://asset.cloudinary.com/vijayvaddi/53730c51f1f340d473d8f58ad19ee9fe))
+## 📸 Screenshots
 
+### 🔹 Home Page
+![Home Page](https://asset.cloudinary.com/vijayvaddi/53730c51f1f340d473d8f58ad19ee9fe)
 
+### 🔹 Trending Section
+![Trending](https://res.cloudinary.com/vijayvaddi/image/upload/v1234567890/trending.png)
 
----
+### 🔹 Anime Details
+![Details](https://res.cloudinary.com/vijayvaddi/image/upload/v1234567890/details.png)
+
 ## Input validation and error handling.
 ![Image](https://res.cloudinary.com/vijayvaddi/image/upload/v1749043067/shbaavlq0lkuxum9mfwk.png)
 
