@@ -30,7 +30,7 @@ A **modern anime discovery and recommendation web app** built with **React (Vite
 ## 📸 Screenshots
 
 ### 🔹 Home Page
-![Home Page](https://asset.cloudinary.com/vijayvaddi/53730c51f1f340d473d8f58ad19ee9fe)
+![Home Page](https://res.cloudinary.com/vijayvaddi/image/upload/v1724856901/homepage.png)
 
 ### 🔹 Trending Section
 ![Trending](https://res.cloudinary.com/vijayvaddi/image/upload/v1234567890/trending.png)
