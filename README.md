@@ -29,7 +29,7 @@ A **modern anime discovery and recommendation web app** built with **React (Vite
 
 ---
 ## Home Page of Campgrounds after register
-![Campgrounds Screenshot](https://res.cloudinary.com/vijayvaddi/image/upload/v1749043076/dltwdtesck9f5bpykrbp.png)
+![Aniverse Screenshot](https://asset.cloudinary.com/vijayvaddi/fcd0f7b95cec7ea76603534f16f5fd89)
 
 
 
