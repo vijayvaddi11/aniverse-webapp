@@ -7,13 +7,13 @@ A **modern anime discovery and recommendation web app** built with **React (Vite
 
 ## 🚀 Features 
 
-- 🔎 **Search Anime** – Find anime titles using Jikan API.  
-- 📺 **Trending Section** – Displays currently popular anime.  
-- 🎬 **Anime Details Page** – View synopsis, ratings, rank, and genres.  
-- 🤝 **Recommendations Section** – Suggests similar anime.  
-- 🛠️ **Appwrite Integration** – Manages database & backend features.  
-- 📱 **Responsive Design** – Works seamlessly on mobile, tablet, and desktop.  
-- ⚡ **Fast UI** – Powered by **Vite + React + Tailwind** with smooth animations.  
+- **Search Anime** – Find anime titles using Jikan API.  
+- **Trending Section** – Displays currently popular anime.  
+- **Anime Details Page** – View synopsis, ratings, rank, and genres.  
+- **Recommendations Section** – Suggests similar anime.  
+- **Appwrite Integration** – Manages database & backend features.  
+- **Responsive Design** – Works seamlessly on mobile, tablet, and desktop.  
+- **Fast UI** – Powered by **Vite + React + Tailwind** with smooth animations.  
 
 ---
 
