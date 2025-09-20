@@ -44,33 +44,35 @@ A **modern anime discovery and recommendation web app** built with **React (Vite
 ## 🧑‍💻 Getting Started
 
 
-```bash
-1. **Clone the repository:**
 
+1. **Clone the repository:**
+```bash
 git clone https://github.com/vijayvaddi11/aniverse-webapp.git
 cd aniverse-webapp
-
+```
 
 
 
 2. **Install dependencies:**
-
+```bash
 npm install
-
+```
 3. **Set up environment variables:**
 
 Create a .env file in the root directory with the following content:
-
+```bash
 VITE_APPWRITE_PROJECT_ID=your_project_id
 VITE_APPWRITE_PROJECT_NAME=anime_app
 VITE_APPWRITE_ENDPOINT=https://fra.cloud.appwrite.io/v1
 VITE_APPWRITE_DATABASE_ID=your_database_id
 VITE_APPWRITE_COLLECTIONS_ID=your_collection_id
-
+```
 
 4. **Run Locally:**
-
+```bash
 npm run dev
+```
+4. **Deployment:**
 
-
+https://aniverse-webapp.vercel.app/
 
