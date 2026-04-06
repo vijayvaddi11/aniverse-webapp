@@ -2,7 +2,7 @@
 
 A **modern anime discovery and recommendation web app** built with **React (Vite), Tailwind CSS, and Appwrite**, powered by the **Jikan API**.Browse trending anime, explore detailed information, and get personalized recommendations — all in a clean and responsive UI.  
 
-# Live - https://aniverse-webapp.vercel.app/
+[comment]: <># Live - https://aniverse-webapp.vercel.app/
 
 
 ---
@@ -72,7 +72,4 @@ VITE_APPWRITE_COLLECTIONS_ID=your_collection_id
 ```bash
 npm run dev
 ```
-4. **Deployment:**
-
-https://aniverse-webapp.vercel.app/
 
